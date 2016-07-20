@@ -1,4 +1,22 @@
 我现在要把这个文件上传到github中你的test这个repo里
 1、先把test.txt这个文件加入“待处理文件”（暂且这么称呼吧）
 有两种方法一个是git add test.txt 这是一个个的来添加，一般不这么用，太烦了，万一有N个文件呢
-		git add . 	这是把所有文件加入“待处理文件”
+		git add . 	这是把所有文件加入“待处理文件” 
+另外要注意一下你所处的目录/d/Github-Repo
+现在是显示为/d/Github-Repo/test (master) 括号里的master代表你现在是处于master分支、
+
+2.现在已经把test.txt文件add了，第二步是加入缓存区，你可以吧这个缓存区理解为“待提交区域”
+git commit -m"这里输入你这次提交的一个附言，比如说修复了XXbug，增加了XXfeature"，必须要有message，（git的本意是让每一次提交变得有意义）-m 的m是message的意思
+
+$ git commit -m"first use git"
+[master (root-commit) 0064a74] first use git
+ 1 file changed, 4 insertions(+)
+ create mode 100644 test.txt
+这就表示提交到缓存区成功了
+
+最后把提交到缓存区的代码推送到指定的仓库
+
+因为我第一次git add时，我只写到了	
+git add . 	这是把所有文件加入“待处理文件”
+所以他只提交这么多东西
+
